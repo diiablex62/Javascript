@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+    <script>
+
+        let carteTresor = "Carte vers le tresor";  // declaration de la variable carteTresor
+
+        function coffreTresor() {
+            let cle = "Clé en or";    // declaration de la variable cle
+            console.log(cle);
+            console.log(carteTresor);
+        }
+
+        coffreTresor();
+        console.log(carteTresor);
+        // console.log(cle); // ReferenceError: cle is not defined, pas dans le meme scope
+
+        function calculPuissance(base) {
+            return base * 10;
+            console.log(hello); // ne s'affichera jamais pas car le return est avant
+        }
+
+        console.log(calculPuissance(5));
+        console.log(calculPuissance(10));
+
+    </script>
+</body>
+
+</html>

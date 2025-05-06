@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonction</title>
+</head>
+<body>
+    <script>
+        // Déclaration d'une fonction
+function salueVisiteur() {
+  console.log("Bienvenue dans ce monde enchanté !");
+}
+
+salueVisiteur(); // Appelle (ou invoque) la fonction salueVisiteur
+
+// fonction fléchée
+const lancerSort = () => {
+  console.log("Abracadabra !");
+};
+lancerSort();
+
+// Fonction avec paramètre(s)
+function sayMyName(name, age = 18) {
+  console.log("je m'appelle " + name + " et j'ai " + age + " ans");
+}
+
+sayMyName("Alex", 31); // On invoque la fonction sayMyName avec les arguments "Alex" et 31
+sayMyName("Bob"); // On invoque la fonction sayMyName avec les arguments "Bob" et 18
+
+
+// Utilisation de rest(...)
+// a utiliser en dernier paramètre et lorque son nombre est variable, dans cet exemple le nombre de notes
+function calculMoyenne(nom, ...notes){
+    // Initialisation d'une variable pour la somme
+    let somme = 0;
+    // Boucle for pour récupérer le total des notes
+    for(i = 0; i < notes.length; i++){ // On démarre à l'indice 0
+        somme +=notes[i];   
+    }
+    // Calcul de la moyenne 
+    let moyenne = somme / notes.length;
+    // Affichage de la moyenne 
+    console.log("La moyenne de : " + nom + " est de : " + moyenne.toFixed(2)) ;
+}
+
+calculMoyenne("Jane", 15,12,14,13,8)
+calculMoyenne("John", 12,14,3,13,8,20,17)
+
+    </script>
+    
+</body>
+</html>

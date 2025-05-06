@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+
+    <script>
+
+        console.log("test");
+
+        let year = 2021;
+        console.log(year);
+
+        year = 2026;
+        console.log(year);
+
+        const secu = 17004;
+        // secu = 17005; // erreur car constante
+        console.log(secu);
+
+        // type primitifs
+
+        let name = "John"; //chaine de caractère => string
+        let age = 25; // nombre entier => number
+        let married = false; // boolean true or false
+        //null et undefined
+
+        let a = 1;
+        a = a * 5; // + - * //
+        a *= 5; // a = a * 5
+
+        a = a + 1;
+        a++; // a = a + 1
+        console.log(a);
+
+        // operateur de comparaison ET
+        console.log(true && true); // true
+        console.log(true && false); // false
+        console.log(false && true); // false
+        console.log(false && false); // false
+
+        // operateur de comparaison OU
+        console.log(true || true); // true
+        console.log(true || false); // true
+        console.log(false || true); // true
+        console.log(false || false); // false
+
+        //Verification
+        let b = "4";
+        let c = 4;
+        console.log(b == c); // true
+
+        //toujours privilegier
+        console.log(b === c); // false
+        console.log(b < c); // false
+        console.log(b > c); // false
+
+
+    </script>
+</body>
+
+</html>

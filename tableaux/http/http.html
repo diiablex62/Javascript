@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // async indique que la fonction est asynchrone, qu'elle prend du temps à s'executer
+        // await indique que la fonction doit attendre que la tache soit terminée avant de continuer
+        async function exampleAsync() {
+            // le bloc try essaie de réaliser les taches de son bloc
+            try {
+                let users = await fetch('https://jsonplaceholder.typicode.com/users'); // await indique que la fonction doit attendre que la tache soit terminée avant de continuer
+                let data = await users.json();
+                console.log(data);
+            } catch (error) {  // si une erreur est rencontrée, le bloc catch est executé
+                console.log("j'ai rencontré une erreur !", error);
+            } finally {    // le bloc finally est toujours executé, bloc optionnel
+                console.log("je suis toujours executé");
+            }
+
+        }
+        exampleAsync();
+
+
+
+        const exampleAsync2 = async () => {
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableau</title>
+</head>
+
+<body>
+
+    <script>
+        
+        // le premier indice d'un tableau est 0
+        let users = ["Jane", "John", "Paul"];
+        // récuperer taille tableau
+        console.log(users.length); // 3
+
+        // acceder a un element du tableau
+        console.log(users[0]); // Jane
+        console.log(users[1]); // John
+
+        // ajouter un elemnt a la fin du tableau
+        users.push("Jack");
+        console.log(users); // ["Jane", "John", "Paul", "Jack"]
+
+        // ajouter un element au debut du tableau   
+        users.unshift("Jim");
+        console.log(users); // ["Jim", "Jane", "John", "Paul", "Jack"]
+
+        // recupere les elements du tableau entre les indices 1 et 3 non inclus
+        let connectedUsers = users.slice(1, 3);
+        console.log(connectedUsers); // ["Jane", "John"]
+
+        // supprimer le dernier element du tableau
+        console.log(users); // ["Jim", "Jane", "John", "Paul", "Jack"]
+        users.pop();
+        console.log(users); // ["Jim", "Jane", "John", "Paul"]
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices</title>
+    <style>
+        .google {
+            color: black;
+        }
+
+        #input {
+            width: 200px;
+            height: 30px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input" placeholder="Entrez du texte" style="color:green">
+    <p>Cliquez sur ce lien : <a class="google" href="https://www.google.fr">Google</a></p>
+
+
+    <script>// Dans un fichier JS en utilisant les références à la page HTML, les écoutes d'événement 
+        // et les fonctions de callback qui en découlent
+        
+        const input = document.getElementById("input");
+        input.addEventListener("input", function () {
+          console.log(input.value);
+        });
+        
+        
+        
+        </script>
+    <script>// EXO 1
+        // Créer une fonction qui prend en paramètre 2 chiffres, les additionne et retourne la somme
+        function additionne(a, b) {
+          return a + b;
+        }
+        // L'invoquer 3 fois avec des chiffres différents et tester le résultat
+        console.log(additionne(2, 6)); // 8
+        console.log(additionne(5, 7)); // 12
+        console.log(additionne(10, 20)); // 30
+        
+        // EXO 2
+        // Créer une fonction qui prend le nom d'un événement et comme deuxième paramètres les participants. 
+        // Ce dernier paramètre est variable.
+        // La fonction doit afficher le nom de l'événement et des participants
+        
+        function afficheParticipants(nomEvenement, ...participants) {
+            console.log("L'événement " + nomEvenement + " réunit les participants suivants : " + participants.join(", "));
+        }
+        
+        afficheParticipants("Soirée pyjama", "jean", "Alex", "paul", "pierre");
+        
+        // EXO 3
+        // Créer une page HTML avec un input et un lien vers une autre page de votre choix (Wikipédia ?)
+        // Dans un fichier JS en utilisant les références à la page HTML, les écoutes d'événement et les fonctions de callback qui en découlent
+        // Afficher en console la saisie de l'utilisateur dans l'input (Aidez vous d'internet, pas de l'IA)
+        // Afficher un alert qui vous prévient que vous allez quitter la page lorsque vous cliquez sur le lien
+        
+        let alerte = document.querySelector("a");
+        alerte.addEventListener("click", () => {
+          alert("Vous allez quitter la page !");
+        });
+        
+        </script>
+</body>
+
+</html>

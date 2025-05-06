@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulation</title>
+</head>
+
+<body>
+
+    <script>
+        let voiture = {
+            marque: "Toyota",
+            prix: 25000,
+            automatic: true,
+            img: "https://images.caradisiac.com/logos-ref/modele/modele--toyota-aygo-x/S6-modele--toyota-aygo-x.jpg",
+            options: {
+                couleur: "gingembre",
+                moteur: "essence",
+                gps: true,
+                clim: "oui",
+            }
+        }
+
+        // recupere les valeurs(clés) de l'objet
+        console.log(Object.keys(voiture)); // ["marque", "prix", "automatic", "img", "options"]
+
+        // recupere les valeurs de l'objet
+        console.log(Object.values(voiture)); // ["Toyota", 25000, true, "https://images.caradisiac.com/logos-ref/modele/modele--toyota-aygo-x/S6-modele--toyota-aygo-x.jpg", {…}]
+
+        // recupere les valeurs et les clés de l'objet
+        console.log(Object.entries(voiture)); // [["marque", "Toyota"], ["prix", 25000], ["automatic", true], ["img", "https://images.caradisiac.com/logos-ref/modele/modele--toyota-aygo-x/S6-modele--toyota-aygo-x.jpg"], ["options", {…}]]
+
+        // destructuration d'un objet
+        // let marque2 = voiture.marque;
+        // let prix = voiture.prix;
+        // let image = voiture.img;
+
+        let { marque, prix, img } = voiture;
+        console.log(marque); // Toyota
+        
+    </script>
+
+</body>
+
+</html>

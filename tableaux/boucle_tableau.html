@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucle tableau</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        let countries = ["France", "Allemagne", "Angleterre", "Espagne", "Italie"];
+
+        //boucle for each
+        countries.forEach((country) => console.log(country.toUpperCase()));
+        console.log(countries);
+
+
+        // map : on créer un nouveau tableau a partir d'un tableau existant
+        let notes = [10, 15, 16, 8, 12, 14, 17, 13, 9, 11];
+        let newNote = notes.map((note) => note - 2);
+        console.log(newNote);
+
+        //filter : on filtre les elements d'un tableau
+        let goodNote = notes.filter((note) => note >= 10); // filtre les notes superieures ou egales a 10
+        console.log(goodNote); // [10, 15, 16, 12, 14, 17, 13, 11]
+
+
+
+    </script>
+
+</body>
+
+</html>

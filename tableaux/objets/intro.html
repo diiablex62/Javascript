@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objets</title>
+</head>
+
+<body>
+
+    <script>
+        let voiture = {
+            marque: "Toyota",
+            prix: 25000,
+            automatic: true,
+            img: "https://images.caradisiac.com/logos-ref/modele/modele--toyota-aygo-x/S6-modele--toyota-aygo-x.jpg",
+            options: {
+                couleur: "rouge",
+                moteur: "essence",
+                gps: true,
+                clim: "oui",
+            }
+        }
+
+        voiture.abs = true; // ajouter un attribut abs a l'objet
+        voiture.options.couleur = "gingembre"; // modifier la valeur de l'attribut couleur
+
+        // acceder aux valeurs de l'objet
+        console.log(voiture.marque); // Toyota
+        console.log(voiture.img); // 25000
+        console.log(voiture.automatic); // true
+        console.log(voiture.options.couleur); // gingembre
+
+
+    </script>
+
+</body>
+
+</html>

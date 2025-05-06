@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo objet et tableau</title>
+</head>
+
+<body>
+    <script>
+
+
+        const movies = [
+            {
+                titre: "Titanic",
+                acteurs: ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane"],
+                anneeSortie: 1997,
+                realisateur: "James Cameron",
+                dureeMinutes: 195,
+                poster: "https://example.com/posters/titanic.jpg",
+                genres: ["Drame", "Romance"],
+                plateformes: ["Netflix", "Amazon Prime Video"],
+                couts: {
+                    budget: "200M USD",
+                    marketing: "100M USD",
+                },
+                note: 7.8,
+            },
+            {
+                titre: "Inception",
+                acteurs: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+                anneeSortie: 2010,
+                realisateur: "Christopher Nolan",
+                dureeMinutes: 148,
+                poster: "https://example.com/posters/inception.jpg",
+                genres: ["Action", "Science-fiction"],
+                plateformes: ["Netflix", "Amazon Prime Video"],
+                couts: {
+                    budget: "160M USD",
+                    marketing: "50M USD",
+                },
+                note: 8.8,
+            },
+            {
+                titre: "The Revenant",
+                acteurs: ["Leonardo DiCaprio", "Tom Hardy", "Domhnall Gleeson"],
+                anneeSortie: 2015,
+                realisateur: "Alejandro González Iñárritu",
+                dureeMinutes: 156,
+                poster: "https://example.com/posters/the-revenant.jpg",
+                genres: ["Aventure", "Drame", "Thriller"],
+                plateformes: ["Hulu", "Netflix"],
+                couts: {
+                    budget: "135M USD",
+                    marketing: "40M USD",
+                },
+                note: 8.0,
+            },
+            {
+                titre: "The Wolf of Wall Street",
+                acteurs: ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie"],
+                anneeSortie: 2013,
+                realisateur: "Martin Scorsese",
+                dureeMinutes: 180,
+                poster: "https://example.com/posters/the-wolf-of-wall-street.jpg",
+                genres: ["Biographie", "Crime", "Drame"],
+                plateformes: ["HBO Max", "Amazon Prime Video"],
+                couts: {
+                    budget: "100M USD",
+                    marketing: "60M USD",
+                },
+                note: 8.2,
+            },
+            {
+                titre: "Once Upon a Time in Hollywood",
+                acteurs: ["Leonardo DiCaprio", "Brad Pitt", "Margot Robbie"],
+                anneeSortie: 2019,
+                realisateur: "Quentin Tarantino",
+                dureeMinutes: 161,
+                poster: "https://example.com/posters/once-upon-a-time-in-hollywood.jpg",
+                genres: ["Comédie", "Drame"],
+                plateformes: ["Netflix", "Amazon Prime Video"],
+                couts: {
+                    budget: "90M USD",
+                    marketing: "80M USD",
+                },
+                note: 7.6,
+            },
+            {
+                titre: "Fight Club",
+                acteurs: ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+                anneeSortie: 1999,
+                realisateur: "David Fincher",
+                dureeMinutes: 139,
+                poster: "https://example.com/posters/fight-club.jpg",
+                genres: ["Drame"],
+                plateformes: ["Hulu", "Amazon Prime Video"],
+                couts: {
+                    budget: "63M USD",
+                    marketing: "20M USD",
+                },
+                note: 8.8,
+            },
+            {
+                titre: "Se7en",
+                acteurs: ["Brad Pitt", "Morgan Freeman", "Gwyneth Paltrow"],
+                anneeSortie: 1995,
+                realisateur: "David Fincher",
+                dureeMinutes: 127,
+                poster: "https://example.com/posters/se7en.jpg",
+                genres: ["Crime", "Drame", "Mystère"],
+                plateformes: ["Netflix", "Hulu"],
+                couts: {
+                    budget: "33M USD",
+                    marketing: "15M USD",
+                },
+                note: 8.6,
+            },
+            {
+                titre: "Inglourious Basterds",
+                acteurs: ["Brad Pitt", "Christoph Waltz", "Diane Kruger"],
+                anneeSortie: 2009,
+                realisateur: "Quentin Tarantino",
+                dureeMinutes: 153,
+                poster: "https://example.com/posters/inglourious-basterds.jpg",
+                genres: ["Aventure", "Drame", "Guerre"],
+                plateformes: ["Amazon Prime Video", "Hulu"],
+                couts: {
+                    budget: "70M USD",
+                    marketing: "30M USD",
+                },
+                note: 8.3,
+            },
+            {
+                titre: "Moneyball",
+                acteurs: ["Brad Pitt", "Jonah Hill", "Philip Seymour Hoffman"],
+                anneeSortie: 2011,
+                realisateur: "Bennett Miller",
+                dureeMinutes: 133,
+                poster: "https://example.com/posters/moneyball.jpg",
+                genres: ["Biographie", "Drame", "Sport"],
+                plateformes: ["Netflix", "Amazon Prime Video"],
+                couts: {
+                    budget: "50M USD",
+                    marketing: "25M USD",
+                },
+                note: 7.6,
+            },
+            {
+                titre: "World War Z",
+                acteurs: ["Brad Pitt", "Mireille Enos", "Daniella Kertesz"],
+                anneeSortie: 2013,
+                realisateur: "Marc Forster",
+                dureeMinutes: 116,
+                poster: "https://example.com/posters/world-war-z.jpg",
+                genres: ["Action", "Horreur", "Science-fiction"],
+                plateformes: ["Netflix", "Amazon Prime Video"],
+                couts: {
+                    budget: "190M USD",
+                    marketing: "80M USD",
+                },
+                note: 7.0,
+            },
+            {
+                titre: "La La Land",
+                acteurs: ["Ryan Gosling", "Emma Stone", "J.K. Simmons"],
+                anneeSortie: 2016,
+                realisateur: "Damien Chazelle",
+                dureeMinutes: 128,
+                poster: "https://example.com/posters/la-la-land.jpg",
+                genres: ["Comédie", "Drame", "Musical"],
+                plateformes: ["Netflix", "Amazon Prime Video"],
+                couts: {
+                    budget: "30M USD",
+                    marketing: "10M USD",
+                },
+                note: 8.0,
+            },
+            {
+                titre: "Drive",
+                acteurs: ["Ryan Gosling", "Carey Mulligan", "Bryan Cranston"],
+                anneeSortie: 2011,
+                realisateur: "Nicolas Winding Refn",
+                dureeMinutes: 100,
+                poster: "https://example.com/posters/drive.jpg",
+                genres: ["Crime", "Drame"],
+                plateformes: ["Hulu", "Amazon Prime Video"],
+                couts: {
+                    budget: "15M USD",
+                    marketing: "8M USD",
+                },
+                note: 7.8,
+            },
+            {
+                titre: "The Notebook",
+                acteurs: ["Ryan Gosling", "Rachel McAdams", "James Garner"],
+                anneeSortie: 2004,
+                realisateur: "Nick Cassavetes",
+                dureeMinutes: 123,
+                poster: "https://example.com/posters/the-notebook.jpg",
+                genres: ["Drame", "Romance"],
+                plateformes: ["Netflix", "Hulu"],
+                couts: {
+                    budget: "29M USD",
+                    marketing: "15M USD",
+                },
+                note: 7.8,
+            },
+            {
+                titre: "Blade Runner 2049",
+                acteurs: ["Ryan Gosling", "Harrison Ford", "Ana de Armas"],
+                anneeSortie: 2017,
+                realisateur: "Denis Villeneuve",
+                dureeMinutes: 164,
+                poster: "https://example.com/posters/blade-runner-2049.jpg",
+                genres: ["Science-fiction", "Thriller"],
+                plateformes: ["HBO Max", "Amazon Prime Video"],
+                couts: {
+                    budget: "150M USD",
+                    marketing: "50M USD",
+                },
+                note: 8.0,
+            },
+            {
+                titre: "Crazy, Stupid, Love",
+                acteurs: ["Ryan Gosling", "Steve Carell", "Julianne Moore"],
+                anneeSortie: 2011,
+                realisateur: "Glenn Ficarra & John Requa",
+                dureeMinutes: 118,
+                poster: "https://example.com/posters/crazy-stupid-love.jpg",
+                genres: ["Comédie", "Romance"],
+                plateformes: ["Netflix", "Hulu"],
+                couts: {
+                    budget: "50M USD",
+                    marketing: "20M USD",
+                },
+                note: 7.4,
+            },
+            {
+                titre: "Blue Valentine",
+                acteurs: ["Ryan Gosling", "Michelle Williams", "Kevin Connolly"],
+                anneeSortie: 2010,
+                realisateur: "Derek Cianfrance",
+                dureeMinutes: 112,
+                poster: "https://example.com/posters/blue-valentine.jpg",
+                genres: ["Drame", "Romance"],
+                plateformes: ["Amazon Prime Video", "Hulu"],
+                couts: {
+                    budget: "2.5M USD",
+                    marketing: "1M USD",
+                },
+                note: 7.4,
+            },
+            {
+                titre: "Catch Me If You Can",
+                acteurs: ["Leonardo DiCaprio", "Tom Hanks", "Christopher Walken"],
+                anneeSortie: 2002,
+                realisateur: "Steven Spielberg",
+                dureeMinutes: 141,
+                poster: "https://example.com/posters/catch-me-if-you-can.jpg",
+                genres: ["Biographie", "Crime", "Drame"],
+                plateformes: ["Netflix", "Amazon Prime Video"],
+                couts: {
+                    budget: "52M USD",
+                    marketing: "20M USD",
+                },
+                note: 8.1,
+            },
+            {
+                titre: "Revolutionary Road",
+                acteurs: ["Leonardo DiCaprio", "Kate Winslet", "Kathy Bates"],
+                anneeSortie: 2008,
+                realisateur: "Sam Mendes",
+                dureeMinutes: 119,
+                poster: "https://example.com/posters/revolutionary-road.jpg",
+                genres: ["Drame", "Romance"],
+                plateformes: ["Hulu", "Amazon Prime Video"],
+                couts: {
+                    budget: "75M USD",
+                    marketing: "35M USD",
+                },
+                note: 7.3,
+            },
+            {
+                titre: "The Aviator",
+                acteurs: ["Leonardo DiCaprio", "Cate Blanchett", "John C. Reilly"],
+                anneeSortie: 2004,
+                realisateur: "Martin Scorsese",
+                dureeMinutes: 170,
+                poster: "https://example.com/posters/the-aviator.jpg",
+                genres: ["Biographie", "Drame"],
+                plateformes: ["Netflix", "Hulu"],
+                couts: {
+                    budget: "110M USD",
+                    marketing: "40M USD",
+                },
+                note: 7.5,
+            },
+            {
+                titre: "The Place Beyond the Pines",
+                acteurs: ["Ryan Gosling", "Bradley Cooper", "Eva Mendes"],
+                anneeSortie: 2012,
+                realisateur: "Derek Cianfrance",
+                dureeMinutes: 140,
+                poster: "https://example.com/posters/the-place-beyond-the-pines.jpg",
+                genres: ["Crime", "Drame"],
+                plateformes: ["Amazon Prime Video", "Hulu"],
+                couts: {
+                    budget: "15M USD",
+                    marketing: "5M USD",
+                },
+                note: 7.3,
+            },
+        ];
+
+        // EXO OBJETS ET TABLEAUX
+
+        //         EXO 1
+        //         Affichez en console uniquement les films dans lesquels Leonardo DiCaprio apparaît.
+        let leonardo = movies.filter((movie) => {
+            return movie.acteurs.includes("Leonardo DiCaprio");
+        });
+        console.log(leonardo);
+
+
+        //             EXO 2
+        //         Affichez en console les titres des films uniquement les films sortis après 2010 et dont la note est supérieure ou égale à 8
+        let films = movies.filter((movie) => {
+            return movie.anneeSortie > 2010 && movie.note >= 8;
+        });
+        console.log(films);
+
+
+        //         EXO 3
+        //         Affichez les titres des films avec Ryan Gosling et qui sont diffusés par Netflix.
+        let ryan = movies.filter((movie) => {
+            return movie.acteurs.includes("Ryan Gosling") && movie.plateformes.includes("Netflix");
+        
+        });
+        console.log(ryan.map((movie) => movie.titre));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo http</title>
+</head>
+<body>
+
+    <script>
+
+// Faire une requête vers cette URL : https://dummyjson.com/products
+// Utiliser l'asynchrone et la gestion des erreurs avec le bloc try catch
+
+async function exampleAsync() {
+    try {
+        let products = await fetch('https://dummyjson.com/products');
+        let data = await products.json();
+        console.log(data);
+    } catch (error) {
+        console.log("j'ai rencontré une erreur !", error);
+    } finally {
+        console.log("je suis toujours executé");
+    }
+}
+
+exampleAsync();
+
+// fonction pour Afficher en console le titre des produits débutant par la lettre "C", les uns en dessus des autres
+const displayProductsStartingWithC = async () => {
+    try {
+        const response = await fetch('https://dummyjson.com/products');
+        const data = await response.json();
+        const products = data.products;
+
+        const filteredProducts = products.filter(product => product.title.startsWith('C'));
+        filteredProducts.forEach(product => console.log(product.title));
+    } catch (error) {
+        console.error("Erreur lors de la récupération des produits :", error);
+    }
+};
+
+displayProductsStartingWithC();
+
+
+    </script>
+    
+</body>
+</html>

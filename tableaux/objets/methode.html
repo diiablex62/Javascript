@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const voitures = [
+        {
+          marque: "Toyota",
+          modele: "Corolla",
+          annee: 2018,
+          couleurs: ["bleu", "noir"],
+        },
+        {
+          marque: "Honda",
+          modele: "Civic",
+          annee: 2020,
+          couleurs: ["rouge", "blanc"],
+        },
+        {
+          marque: "Ford",
+          modele: "Mustang",
+          annee: 2015,
+          couleurs: ["jaune", "noir"],
+        },
+        {
+          marque: "Audi",
+          modele: "A4",
+          annee: 2021,
+          couleurs: ["blanc", "noir"],
+        },
+      ];
+
+      // il est possible de cumuler les méthodes filter et map
+      const voituresRecents = voitures
+        .filter((voiture) => voiture.annee > 2017) 
+        .map((voiture) => console.log(voiture.marque));
+
+      //   La méthode find() retourne le premier élément du tableau qui correspond à la condition spécifiée sinon elle retourne undefined.
+      const voitureCivic = voitures.find(
+        (voiture) => voiture.modele === "Civic"
+      );
+      console.log(voitureCivic); 
+
+      const voiture = voitures[0];
+      const disponibleNoir = voiture.couleurs.includes("noir");
+      console.log(disponibleNoir);
+
+      // includes() permet de vérifier si un tableau contient un élément spécifique.
+      const blackCar = voitures.filter((car) => car.couleurs.includes("noir"));
+      console.log(blackCar); 
+
+    </script>
+  </body>
+</html>

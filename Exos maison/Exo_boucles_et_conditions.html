@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo_boucles_et_conditions</title>
+</head>
+<body>
+    <script>// // Exo boucles et conditions
+
+        // //1. Calculs arithmétiques
+        // //Objectif : Utiliser les opérateurs arithmétiques et les opérateurs d’affectation
+        
+        // //Déclarez une variable a initialisée à 10.
+        
+        // //Multipliez-la par 2, ajoutez 5 (en utilisant la syntaxe raccourcie) et affichez
+        // le résultat final dans la console.
+        
+        let a = 10;
+        a *= 2;
+        a += 5;
+        console.log(a);
+        
+        // 2. Comparaisons et opérateurs logiques
+        // Objectif : Mettre en œuvre les comparaisons simples et les opérateurs logiques
+        
+        // Exercice :
+        // Créez deux variables, x et y , avec comme valeur 8.
+        // Vérifiez et affichez dans la console si :
+        // x est égal à y en utilisant la double et la stricte égalité
+        // x est supérieur à y
+        // x est inférieur ou égal à y
+        // x est supérieur ou égal à 5 et inférieur ou égal à 10
+        // x est inférieur à 5 ou supérieur à 10
+        
+        let x = 8;
+        let y = 8;
+        console.log(x == y);
+        console.log(x === y);
+        console.log(x > y);
+        console.log(x <= y);
+        console.log(x >= 5 && x <= 10);
+        console.log(x < 5 || x > 10);
+        
+        // 3. Opérateur ternaire
+        // Objectif : Utiliser l’opérateur ternaire pour simplifier une condition
+        
+        // Exercice :
+        // Créez une variable score .avec une valeur numérique
+        // Utilisez l’opérateur ternaire pour afficher "Réussi" si score est supérieur ou
+        // égal à 10, et "Échoué" sinon.
+        
+        let score = 12;
+        score >= 10 ? console.log("Réussi") : console.log("Échoué");
+        
+        // 4. Boucle for – Table de multiplication avec condition
+        // Exo boucles et conditions 1
+        // Objectif : Itérer avec une boucle for pour afficher une table de multiplication
+        
+        // Exercice :
+        // Écrivez une boucle qui affiche la table de multiplication de 7 (de 1 à 10
+        // inclus sauf pour le chiffre 5).
+        // Chaque ligne devra afficher le calcul sous la forme : "i * 7 = résultat" .
+        
+        for (let i = 1; i <= 10; i++) {
+          if (i !== 5) {
+            console.log(i + " * 7 = " + i * 7);
+          }
+        }
+        
+        // 5. Calcul de la somme d’une suite
+        // Objectif : Utiliser une boucle pour calculer la somme d’entiers
+        
+        // Exercice :
+        // Déclarez une variable pour la somme initialisé à 0
+        // Calculez puis affichez la somme des nombres de 1 à 20.
+        let sum = 0;
+        for (let i = 1; i <= 20; i++) {
+          sum += i;
+        }
+        console.log(sum);
+        
+        // 6. Exercice combiné – Somme des chiffres paires
+        // Objectif : Combiner boucle et calculs arithmétiques.
+        
+        // Exercice :
+        // Calculez puis affichez la somme des nombres de 0 à 16
+        
+        // let sum2 = 0;
+        // for (let i = 0; i <= 16; i++) {
+        //   if (i % 2 === 0) {
+        //     sum2 += i;
+        //   }
+        // }
+        // console.log(sum2);
+        
+        let sum2 = 0;
+         for (let i = 0; i <= 16; i+2) {
+          sum2= sum2 + i;
+          }
+          console.log(sum2);
+        
+        // 7. Exercice calcul des différentes opérations
+        // Objectif : Effectuer des calculs en utilisant plusieurs conditions
+        
+        // Exercice :
+        // Déclarer deux variables avec comme valeur 12 et 4
+        // Déclarer une variable de type chaine de caractère qui indique une
+        // opération (division, addition, soustraction ou multiplication)
+        // Créer une série de conditions qui permet d’afficher le calcul selon le type
+        // d’opération.
+        // Prévoir dans la condition une opération qui ne fait pas partie des 4
+        // précisées et qui affichera opération inconnue
+        // Tester avec ls 4 opérations puis avec une opération qui ne fait pas partie de
+        // la liste
+        // Résultat attendu
+        // 3
+        // 16
+        // 8
+        // 48
+        // opération inconnue
+        
+        const num1 = 12;
+        const num2 = 4;
+        
+        function calculate(operation) {
+          let result;
+        
+          if (operation === "division") {
+            result = num1 / num2;
+          } else if (operation === "addition") {
+            result = num1 + num2;
+          } else if (operation === "soustraction") {
+            result = num1 - num2;
+          } else if (operation === "multiplication") {
+            result = num1 * num2;
+          } else {
+            console.log("opération inconnue");
+            return;
+          }
+        
+          console.log(result);
+        }
+        
+        calculate("division"); // 3
+        calculate("addition"); // 16
+        calculate("soustraction"); // 8
+        calculate("multiplication"); // 48
+        calculate("test"); // opération inconnue
+        </script>
+</body>
+</html>

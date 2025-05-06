@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+</head>
+<body>
+
+    <script>
+// if else
+if ("condition à respecter") {
+  'si la condition est vraie => on exécute cette tache';
+} else {
+  ("sinon je fais autre chose");
+}
+
+// vous creez une variable pour un nom
+// vous creez une variable pour un age
+
+// condition à realiser si l'age est superieur ou egale à 18 ans, vous indiquez
+// en console 'bienvenue' + nom
+// sinon 'acces interdit'
+
+const nom = "Alex";
+const age2 = 18;
+
+if (age2 >= 18) {
+  console.log("Bienvenue " + nom);
+} else {
+  console.log("Acces interdit");
+}
+
+//if else if else
+
+if ("condition à respecter") {
+  ("si la condition est vraie => on exécute cette tache");
+} else if ("Autre condition à respecter") {
+    ("on respecte cette condition");
+} else {
+  ("sinon je fais autre chose");
+}
+
+const note = prompt("Quel est votre note");
+
+if (note >= 15) {
+    alert("Recu avec mention");
+}
+else if (note < 15 && note >= 10) {
+    alert("Recu mais tu peux mieux faire");
+    }
+else {
+    alert("Recalé");
+}
+
+//Ternaire
+// verification ? true : false
+let childAge = 18;
+childAge > 18 ? console.log("Bienvenue") : console.log("Acces interdit");
+
+// switch (A venir...)
+
+
+
+    </script>
+    
+</body>
+</html>
